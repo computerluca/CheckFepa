@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -96,16 +97,12 @@ public class AnomalieQuadratura {
         int conta = 0;
         for (Double aliquote1 : aliquote) {
             conta++;
-            System.out.println("Aliquota in esame" + aliquote1);
             Double somma_dett_al = getComm().return_somma_dett_per_aliquota(aliquote1.doubleValue());
             Double somma_dett_alo = round(somma_dett_al);
-            System.out.println("Somma dettagli aliquota  " + somma_dett_al);
             Double somma_riep_al = getComm().return_somma_imponibili_riepilogo_per_aliquota(aliquote1.doubleValue());
-
             Double somma_riep_alo = round(somma_riep_al);
             Double spese_accessorie_iva = getComm().return_somma_spese_accessorie_aliquota(aliquote1);
             Double totale2 = somma_dett_alo + spese_accessorie_iva;
-            System.out.println("Somma riepilogo aliquota   " + somma_riep_al);
 
             if (!totale2.equals(somma_riep_alo)) {
                 anomalia = getM().Crea_Anomalia("Imponibile aliquota " + aliquote1, "Q", "Errore di quadratura sul totale riepilogo"
@@ -114,7 +111,6 @@ public class AnomalieQuadratura {
             }
 
         }
-        System.out.println("Contagiro" + conta);
         /*Controlla per riepilogo 
         
        
