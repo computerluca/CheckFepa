@@ -5,8 +5,7 @@ Vengono effettuati i seguenti controlli di quadratura
 - controlli di quadratura tra prezzo unitario e prezzo totale per ogni riga dettaglio
 - controlli di quadratura per aliquota iva tra l'imponibile e l'iva del riepilogo e l'imponibile e l'iva delle righe dettaglio
 Esempio di utilizzo è contenuto nel file Example.java
-La classe Anomalie di Quadratura prevede tre metodi relativi ai 3 controlli di quadratura e un metodo che restituisce le anomalie 
-di quadratura. La lista restituita è di tipologia List<String>. 
+La classe Anomalie di Quadratura prevede tre metodi relativi ai 3 controlli di quadratura e un metodo che restituisce le anomalie di quadratura. La lista restituita è di tipologia List. 
 Tali classi Java possono essere integrate in qualsiasi gestionale che elabori le fatture elettroniche ricevute da SDI.
 
 
