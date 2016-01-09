@@ -1,5 +1,4 @@
 
-package rename;
 
 import java.util.List;
 import javax.xml.xpath.XPathExpressionException;
