@@ -1,5 +1,3 @@
-
-
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -114,7 +112,6 @@ public class Commerciale {
         NodeList righe_dettaglio = null;
         Double somma = 0.00;
         String expression = "FatturaElettronica/FatturaElettronicaBody/DatiBeniServizi/DettaglioLinee[NumeroLinea=" + dett + "]/ScontoMaggiorazione";
-        System.out.println("Expression" + expression);
         try {
             righe_dettaglio = (NodeList) (getxPath().compile(expression).evaluate(getDoc(), XPathConstants.NODESET));
         } catch (XPathExpressionException ex) {
@@ -122,8 +119,7 @@ public class Commerciale {
         for (int i = 0; i < righe_dettaglio.getLength(); i++) {
             somma = 0.00;
             Node nNode = righe_dettaglio.item(i);
-            System.out.println("\nCurrent Element :"
-                    + nNode.getNodeName());
+            
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement = (Element) nNode;
                 if (eElement.getElementsByTagName("Importo").getLength() > 0 && eElement.getElementsByTagName("Percentuale").getLength() == 0) {
@@ -159,8 +155,7 @@ public class Commerciale {
 
         for (int i = 0; i < getNode2().getLength(); i++) {
             Node nNode = getNode2().item(i);
-            System.out.println("\nCurrent Element :"
-                    + nNode.getNodeName());
+           
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement = (Element) nNode;
 
@@ -195,16 +190,11 @@ public class Commerciale {
         }
         for (int i = 0; i < getNode().getLength(); i++) {
             Node nNode2 = getNode().item(i);
-            System.out.println("\nCurrent Element :"
-                    + nNode2.getNodeName());
+            
             if (nNode2.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement2 = (Element) nNode2;
 
-                System.out.println("Importo: "
-                        + eElement2
-                        .getElementsByTagName("Importo")
-                        .item(0)
-                        .getTextContent());
+               
                 if (eElement2.getElementsByTagName("Importo").getLength() >= 1) {
 
                     arr = eElement2.getElementsByTagName("Importo").item(0).getTextContent().trim();
@@ -232,16 +222,11 @@ public class Commerciale {
         }
         for (int i = 0; i < getNode().getLength(); i++) {
             Node nNode2 = getNode().item(i);
-            System.out.println("\nCurrent Element :"
-                    + nNode2.getNodeName());
+           
             if (nNode2.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement2 = (Element) nNode2;
 
-                System.out.println("Importo: "
-                        + eElement2
-                        .getElementsByTagName("Importo")
-                        .item(0)
-                        .getTextContent());
+              
                 if (eElement2.getElementsByTagName("Importo").getLength() >= 1) {
 
                     arr = eElement2.getElementsByTagName("Importo").item(0).getTextContent().trim();
@@ -288,17 +273,10 @@ public class Commerciale {
         }
         for (int i = 0; i < getNode().getLength(); i++) {
             Node nNode2 = getNode().item(i);
-            System.out.println("\nCurrent Element :"
-                    + nNode2.getNodeName());
+           
             if (nNode2.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement2 = (Element) nNode2;
-                System.out.println("Aliquota che viene passata" + al);
-
-                System.out.println("PrezzoTotale "
-                        + eElement2
-                        .getElementsByTagName("PrezzoTotale")
-                        .item(0)
-                        .getTextContent());
+               
                 if (eElement2.getElementsByTagName("PrezzoTotale").getLength() >= 1) {
 
                     arr = eElement2.getElementsByTagName("PrezzoTotale").item(0).getTextContent().trim();
@@ -327,17 +305,10 @@ public class Commerciale {
         }
         for (int i = 0; i < getNode().getLength(); i++) {
             Node nNode2 = getNode().item(i);
-            System.out.println("\nCurrent Element :"
-                    + nNode2.getNodeName());
+            
             if (nNode2.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement2 = (Element) nNode2;
-                System.out.println("Aliquota che viene passata" + al);
-
-                System.out.println("PrezzoTotale "
-                        + eElement2
-                        .getElementsByTagName("PrezzoTotale")
-                        .item(0)
-                        .getTextContent());
+               
                 if (eElement2.getElementsByTagName("PrezzoTotale").getLength() >= 1) {
 
                     arr = eElement2.getElementsByTagName("PrezzoTotale").item(0).getTextContent().trim();
@@ -370,16 +341,11 @@ public class Commerciale {
         }
         for (int i = 0; i < getNode().getLength(); i++) {
             Node nNode2 = getNode().item(i);
-            System.out.println("\nCurrent Element :"
-                    + nNode2.getNodeName());
+            
             if (nNode2.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement2 = (Element) nNode2;
 
-                System.out.println("PrezzoTotale "
-                        + eElement2
-                        .getElementsByTagName("PrezzoTotale")
-                        .item(0)
-                        .getTextContent());
+               
                 if (eElement2.getElementsByTagName("PrezzoTotale").getLength() >= 1) {
 
                     arr = eElement2.getElementsByTagName("PrezzoTotale").item(0).getTextContent().trim();
@@ -459,16 +425,11 @@ public class Commerciale {
         }
         for (int i = 0; i < getNode().getLength(); i++) {
             Node nNode2 = getNode().item(i);
-            System.out.println("\nCurrent Element :"
-                    + nNode2.getNodeName());
+           
             if (nNode2.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement2 = (Element) nNode2;
 
-                System.out.println("ImponibileImporto "
-                        + eElement2
-                        .getElementsByTagName("ImponibileImporto")
-                        .item(0)
-                        .getTextContent());
+              
                 if (eElement2.getElementsByTagName("ImponibileImporto").getLength() >= 1) {
 
                     arr = eElement2.getElementsByTagName("ImponibileImporto").item(0).getTextContent().trim();
@@ -499,16 +460,11 @@ public class Commerciale {
         }
         for (int i = 0; i < getNode().getLength(); i++) {
             Node nNode2 = getNode().item(i);
-            System.out.println("\nCurrent Element :"
-                    + nNode2.getNodeName());
+           
             if (nNode2.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement2 = (Element) nNode2;
 
-                System.out.println("ImponibileImporto "
-                        + eElement2
-                        .getElementsByTagName("ImponibileImporto")
-                        .item(0)
-                        .getTextContent());
+                
                 if (eElement2.getElementsByTagName("ImponibileImporto").getLength() >= 1) {
 
                     arr = eElement2.getElementsByTagName("ImponibileImporto").item(0).getTextContent().trim();
@@ -532,7 +488,6 @@ public class Commerciale {
         String expression3 = "sum(FatturaElettronica/FatturaElettronicaBody/DatiBeniServizi/DatiRiepilogo/SpeseAccessorie)";
         try {
             prezzo_totale = xpath3.compile(expression3).evaluate(getDoc());
-            System.out.println("merda");
 
         } catch (XPathExpressionException ex) {
           
@@ -563,8 +518,6 @@ public class Commerciale {
         }
         for (int i = 0; i < getNode().getLength(); i++) {
             Node nNode2 = getNode().item(i);
-            System.out.println("\nCurrent Element :"
-                    + nNode2.getNodeName());
             if (nNode2.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement2 = (Element) nNode2;
 
@@ -607,25 +560,20 @@ public class Commerciale {
 
         for (int i = 0; i < nodo.getLength(); i++) {
             conta++;
-            System.out.println("\nCurrent Element :"
-                    + nodo.item(i).getNodeName());
+            
             Element eElement2 = (Element) nodo.item(i);
             if (eElement2.getElementsByTagName("Importo").getLength() >= 1
                     && eElement2.getElementsByTagName("Percentuale").getLength() >= 1) {
                 String per = eElement2.getElementsByTagName("Percentuale").item(0).getTextContent().trim();
                 Double perc = round(Double.parseDouble(per));
-                System.out.println("Percentuale" + perc);
 
                 String imp = eElement2.getElementsByTagName("Importo").item(0).getTextContent().trim();
 
                 Double impo = round(Double.parseDouble(imp));
-                System.out.println("Importo" + imp);
 
                 String tipo = eElement2.getElementsByTagName("Tipo").item(0).getTextContent().trim();
-                System.out.println("Tipologia" + tipo);
                 Double impo_calc = round((totale_calcolato * perc) / 100);
-                System.out.println("Totale calcolato" + totale_calcolato);
-                System.out.println("Importo calcolato" + impo_calc);
+              
                 if ("SC".equals(tipo)) {
 
                     somma_sconto += impo_calc;
@@ -687,7 +635,6 @@ public class Commerciale {
                     + n_linea + "Sconto: Errore di quadratura sul totale Prezzo Unitario* Quantità -sconti +maggiorazioni farebbe" + round(totale_calcolato)
                     + " ma nel file è indicato " + round(toto));
         }
-        System.out.println("ciao" + conta);
         return lista_anomalie;
     }
 
@@ -738,8 +685,7 @@ public class Commerciale {
         }
         for (int i = 0; i < getNode().getLength(); i++) {
             Node nNode2 = getNode().item(i);
-            System.out.println("\nCurrent Element :"
-                    + nNode2.getNodeName());
+            
             if (nNode2.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement2 = (Element) nNode2;
                 pu = eElement2.getElementsByTagName("PrezzoUnitario").item(0).getTextContent().trim();
@@ -787,7 +733,6 @@ public class Commerciale {
         NodeList nodonodo = (NodeList) xpath4.compile(expression3).evaluate(getDoc(), XPathConstants.NODESET);
         XPath xpath5 = XPathFactory.newInstance().newXPath();
         NodeList nodonodo2 = (NodeList) xpath5.compile(expression4).evaluate(getDoc(), XPathConstants.NODESET);
-        System.out.println("Lunghezza nodono2" + nodonodo2.getLength());
         Double somma_iva_riepilogo_calcolata = 0.00;
         Double somma_iva_riepilogo_file = 0.00;
         Double somma_iva_dettaglio = 0.00;
@@ -797,12 +742,10 @@ public class Commerciale {
             somma_iva_riepilogo_file = 0.00;
             somma_iva_riepilogo_calcolata = 0.00;
             n_riepilogo_per_aliquota++;
-            System.out.println("Analisi aliquota IVA"
-                    + aliquota);
+           
             for (int i = 0; i < nodonodo.getLength(); i++) {
                 Node nNode2 = getNode().item(i);
-                System.out.println("\nCurrent Element :"
-                        + nNode2.getNodeName());
+               
                 if (nNode2.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement2 = (Element) nNode2;
                     String aliquota_trov = eElement2.getElementsByTagName("AliquotaIVA").item(0).getTextContent().trim();
@@ -825,11 +768,8 @@ public class Commerciale {
 
                             String anomalia = an.Crea_Anomalia("Riepilogo iva  " + aliquota + "numero" + n_riepilogo_per_aliquota, "Q", "Errore di quadratura dell'iva sul riepilogo", imposto_arr, imposta_calcolata);
                             lista_anomalie.add(anomalia);
-                            System.out.println(anomalia);
                         }
-                        System.out.println("Riepilogo aliquota" + aliquota);
-                        System.out.println("IVa corretta" + somma_iva_riepilogo_calcolata);
-                        System.out.println("IVa del file" + somma_iva_riepilogo_file);
+                      
                     }
                     /*aggiungere somma delle ive del riepilogo dell'importo calcolato da U-GOv e confrontarlo
                      con la somma delle ive del riepilogo relativo. 
@@ -846,8 +786,7 @@ public class Commerciale {
             for (int i = 0; i < nodonodo2.getLength(); i++) {
 
                 Node nNode3 = nodonodo2.item(i);
-                System.out.println("\nCurrent Element :"
-                        + nNode3.getNodeName());
+                
                 if (nNode3.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement3 = (Element) nNode3;
                     String aliquota_trova = eElement3.getElementsByTagName("AliquotaIVA").item(0).getTextContent().trim();
@@ -857,21 +796,13 @@ public class Commerciale {
                         Double totale_d = Double.parseDouble(prezzo_totale);
 
                         somma_iva_dettaglio += totale_d * aliquota / 100;
-                        System.out.println("iva_dettaglio " + somma_iva_dettaglio);
                     }
                 }
             }
             Double spese_accessorie = 0.00;
             spese_accessorie = this.return_somma_spese_accessorie_aliquota(aliquota);
-            System.out.println(spese_accessorie);
             somma_iva_dettaglio += round(spese_accessorie * aliquota / 100);
-            System.out.println(round(spese_accessorie * aliquota / 100));
             if (!(round(somma_iva_dettaglio).equals(round(somma_iva_riepilogo_file)))) {
-                System.out.println(""
-                        + "Per l'aliquota " + aliquota
-                        + " l'iva dei dettagli e l'iva del riepilogo non coincide "
-                        + "    l'iva nei dettagli risulta di   " + round(somma_iva_dettaglio)
-                        + "mentre l'iva del riepilogo risulta    " + round(somma_iva_riepilogo_calcolata));
                 // String anomalia2 = an.Crea_Anomalia("IVA dettaglio ","Iva riepilogo"+aliquota,round(somma_iva_dettaglio),round(somma_iva_riepilogo_calcolata));
                 StringBuilder appendo = new StringBuilder();
                 appendo = appendo.append("Per l'aliquota ").append(aliquota).append(" l'iva dei dettagli e l'iva del riepilogo non coincide " + "    l'iva nei dettagli risulta di   ").append(round(somma_iva_dettaglio)).append("mentre l'iva del riepilogo risulta    ").append(round(somma_iva_riepilogo_file));
@@ -887,9 +818,7 @@ public class Commerciale {
                 
                     
              */
-            System.out.println("Riepilogo iva " + aliquota);
-            System.out.println("Totale iva  aliquotacalcolata " + somma_iva_riepilogo_calcolata);
-            System.out.println("Totale iva file" + somma_iva_riepilogo_file);
+           
             /*if(!somma_iva_riepilogo_calcolata.equals(somma_iva_riepilogo_file)){
              StringBuilder appendo = new StringBuilder();
              appendo= appendo.append("Per l'aliquota ").append(aliquota).append(" l'iva dei dettagli e l'iva del riepilogo non coincide " + "    l'iva nei dettagli risulta di   ").append(round(somma_iva_dettaglio)).append("mentre l'iva del riepilogo risulta    ").append(round(somma_iva_riepilogo_calcolata));
@@ -930,7 +859,6 @@ public class Commerciale {
         String expression3 = "sum(FatturaElettronica/FatturaElettronicaBody/DatiBeniServizi/DatiRiepilogo/Imposta)";
         try {
             prezzo_totale = xpath3.compile(expression3).evaluate(getDoc());
-            System.out.println("merda");
 
         } catch (XPathExpressionException ex) {
         }
@@ -954,16 +882,11 @@ public class Commerciale {
         }
         for (int i = 0; i < getNode().getLength(); i++) {
             Node nNode2 = getNode().item(i);
-            System.out.println("\nCurrent Element :"
-                    + nNode2.getNodeName());
+            
             if (nNode2.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement2 = (Element) nNode2;
 
-                System.out.println("Imposta "
-                        + eElement2
-                        .getElementsByTagName("Imposta")
-                        .item(0)
-                        .getTextContent());
+               
                 if (eElement2.getElementsByTagName("Imposta").getLength() >= 1) {
 
                     arr = eElement2.getElementsByTagName("Imposta").item(0).getTextContent().trim();
@@ -1009,16 +932,11 @@ public class Commerciale {
         }
         for (int i = 0; i < getNode2().getLength(); i++) {
             Node nNode = getNode2().item(i);
-            System.out.println("\nCurrent Element :"
-                    + nNode.getNodeName());
+           
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement = (Element) nNode;
 
-                System.out.println("AliquotaIVA : "
-                        + eElement
-                        .getElementsByTagName("AliquotaIVA")
-                        .item(0)
-                        .getTextContent());
+               
                 aliquota1 = eElement.getElementsByTagName("AliquotaIVA").item(0).getTextContent().trim();
                 aliquota = Double.parseDouble(aliquota1);
                 if (!(aliquote.contains(aliquota))) {
@@ -1045,16 +963,11 @@ public class Commerciale {
         }
         for (int i = 0; i < getNode2().getLength(); i++) {
             Node nNode = getNode2().item(i);
-            System.out.println("\nCurrent Element :"
-                    + nNode.getNodeName());
+           
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement = (Element) nNode;
 
-                System.out.println("AliquotaIVA dettaglio: "
-                        + eElement
-                        .getElementsByTagName("AliquotaIVA")
-                        .item(0)
-                        .getTextContent());
+                
                 aliquota1 = eElement.getElementsByTagName("AliquotaIVA").item(0).getTextContent().trim();
                 aliquota = Double.parseDouble(aliquota1);
                 if (!(aliquote.contains(aliquota))) {
