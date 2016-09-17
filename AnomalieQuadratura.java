@@ -128,66 +128,7 @@ public class AnomalieQuadratura {
         this.getLista_anomalie().addAll(getComm().check_prezzo_unitario_prezzo_totale());
     }
 
-    /*
-     List<Double> aliquote = getComm().return_lista_aliquote();
-            
-     String anomalia = null;
-     int conta = 0;
-     Double somma_iva_dettaglio=0.00;
-     Double arr_somma_iva_dettaglio = 0.00;
-     Double somma_iva_riepilogo = 0.00;
-     Double arr_somma_iva_riepilogo = 0.00;
-     Double somma_riepilogo_in_esame = 0.00;
-     Double arr_somma_riepilogo_in_esame = 0.00;
-     List <Double> riepilogo_per_aliquota = new ArrayList<>();
-     List <Double> dettagli_per_aliquota = new ArrayList<>();
 
-     for (Double aliquote1 : aliquote) {
-     riepilogo_per_aliquota = getComm().return_lista_imponibili_riepilogo_per_aliquota(aliquote1);
-     for(Double riepilogo:riepilogo_per_aliquota){
-                    
-     somma_iva_riepilogo +=riepilogo*aliquote1/100;
-     if(somma_iva_riepilogo.equals)
-      
-      
-      
-     }
-     arr_somma_iva_riepilogo = Math.ceil(somma_iva_riepilogo*100);
-     arr_somma_iva_riepilogo /= 100;
-                
-     {
-     List<Double> aliquote = getComm().return_lista_aliquote();
-            
-     List <String> anomalies = new ArrayList<>();
-     String anomalia = null;
-     for (Double aliquote1 : aliquote) {
-     System.out.println("Aliquota in esame"+aliquote1);
-     Double somma_dett_al = getComm().return_somma_dett_per_aliquota(aliquote1);
-     Double somma_riep_al = getComm().return_somma_imponibili_riepilogo_per_aliquota(aliquote1);
-     if(!somma_dett_al.equals(somma_riep_al)){
-     anomalia = getM().Crea_Anomalia("Imponibile aliquota "+aliquote1,"Q", "Errore di quadratura sul totale riepilogo"
-     + "rispetto ai dettagli del file",somma_riep_al,somma_dett_al);
-     }
-     }
-     this.getLista_anomalie().add(anomalia);
-
-                
-                
-                
-                
-                
-                
-                
-                
-                
-               
-     }
-     
-     
-     /**
-     *
-     * @return
-   
   
      /**
      * Restituisce la lista delle anomalie generate tramite la classe Anomalia 
