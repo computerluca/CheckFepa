@@ -100,11 +100,11 @@ public class Commerciale {
 
     }
 
-    public Double round(Double number) {
-        double numero;
-        numero = Math.pow(10, 2);
-        numero = Math.round(numero * number) / numero;
-        return numero;
+   public Double round(Double number) {
+BigDecimal bdTest = new BigDecimal(  number.toString());
+  bdTest = bdTest.setScale(2, BigDecimal.ROUND_HALF_UP);
+   Double numero = Double.valueOf(bdTest.doubleValue());  
+   return numero;
     }
 
     public Double somma_sconti_dettaglio(String dett) {
